@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PB&J — Brand Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ─── Brand Tokens ───────────────────────────────────── */
+    :root {
+      /* Core Colors */
+      --burgundy:       #6B1A2A;   /* Primary — authority, precision */
+      --burgundy-deep:  #4D1020;   /* Darker burgundy — footer, hero */
+      --burgundy-light: #8C3045;   /* Lighter — hover states */
+      --plum:           #3D1454;   /* Secondary — exclusivity, depth */
+      --plum-deep:      #280D38;   /* Darker plum — overlays */
+      --plum-light:     #5A2878;   /* Lighter — hover states */
+      --gold:           #C4971F;   /* Accent — premium, trust */
+      --gold-light:     #DEB84A;   /* Lighter gold — highlights */
+      --gold-pale:      #F0D98A;   /* Subtle gold — backgrounds */
+
+      /* Neutrals */
+      --cream:          #FAF8F4;   /* Background — warm white */
+      --cream-dark:     #F0EAE3;   /* Section alt background */
+      --ink:            #1A0B12;   /* Primary text — near-black */
+      --ink-mid:        #3D2530;   /* Secondary text */
+      --muted:          #7A6470;   /* Labels, captions */
+      --border:         #E5DDE0;   /* Subtle dividers */
+      --white:          #FFFFFF;
+
+      /* Typography */
+      --font-serif:   'Cormorant Garamond', Georgia, serif;
+      --font-sans:    'Montserrat', -apple-system, sans-serif;
+
+      /* Type Scale */
+      --text-xs:      11px;
+      --text-sm:      13px;
+      --text-base:    16px;
+      --text-md:      18px;
+      --text-lg:      24px;
+      --text-xl:      32px;
+      --text-2xl:     48px;
+      --text-3xl:     64px;
+      --text-hero:    96px;
+
+      /* Spacing (8dp system) */
+      --space-1:   4px;
+      --space-2:   8px;
+      --space-3:   12px;
+      --space-4:   16px;
+      --space-5:   24px;
+      --space-6:   32px;
+      --space-7:   48px;
+      --space-8:   64px;
+      --space-9:   96px;
+      --space-10: 128px;
+
+      /* Radius */
+      --radius-sm:   3px;
+      --radius-md:   6px;
+      --radius-lg:   12px;
+      --radius-full: 999px;
+
+      /* Shadows */
+      --shadow-sm:   0 1px 4px rgba(107, 26, 42, 0.08);
+      --shadow-md:   0 4px 16px rgba(107, 26, 42, 0.12);
+      --shadow-lg:   0 8px 32px rgba(107, 26, 42, 0.16);
+    }
+
+    /* ─── Base ───────────────────────────────────────────── */
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Layout ─────────────────────────────────────────── */
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: var(--space-8) var(--space-6);
+    }
+
+    section { margin-bottom: var(--space-10); }
+
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--space-5);
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: var(--space-4);
+      line-height: 1.1;
+    }
+
+    .section-desc {
+      font-size: var(--text-base);
+      color: var(--ink-mid);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: var(--space-6);
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: var(--space-7) 0;
+    }
+
+    /* ─── Brand Header ───────────────────────────────────── */
+    .brand-header {
+      background: var(--burgundy-deep);
+      color: var(--white);
+      padding: var(--space-9) var(--space-6);
+      text-align: center;
+      margin-bottom: var(--space-9);
+    }
+
+    .brand-header .kit-label {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: var(--space-4);
+    }
+
+    .brand-header .logo-lockup {
+      font-family: var(--font-serif);
+      font-size: 72px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: var(--space-3);
+    }
+
+    .brand-header .logo-lockup span {
+      color: var(--gold-light);
+    }
+
+    .brand-header .tagline {
+      font-family: var(--font-serif);
+      font-size: var(--text-lg);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 1px;
+    }
+
+    .brand-header .ampersand {
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    /* ─── Color System ───────────────────────────────────── */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .swatch {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .swatch-block {
+      height: 80px;
+    }
+
+    .swatch-info {
+      background: var(--white);
+      padding: var(--space-3) var(--space-4);
+      border: 1px solid var(--border);
+      border-top: none;
+    }
+
+    .swatch-name {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .swatch-hex {
+      font-family: 'Courier New', monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    .swatch-role {
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ─── Typography ─────────────────────────────────────── */
+    .type-sample {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: var(--space-6);
+      margin-bottom: var(--space-4);
+      background: var(--white);
+    }
+
+    .type-meta {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--space-3);
+    }
+
+    .type-display {
+      font-family: var(--font-serif);
+      font-size: 72px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .type-h1 {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+
+    .type-h2 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.15;
+    }
+
+    .type-h3 {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .type-manifesto {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .type-body-lg {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink-mid);
+      line-height: 1.75;
+    }
+
+    .type-body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+
+    .type-label {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .type-scale-row {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-5);
+      margin-bottom: var(--space-3);
+      flex-wrap: wrap;
+    }
+
+    .scale-value {
+      font-size: var(--text-xs);
+      color: var(--muted);
+      font-family: 'Courier New', monospace;
+      min-width: 40px;
+    }
+
+    /* ─── Buttons ────────────────────────────────────────── */
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      align-items: center;
+      padding: var(--space-6);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-4);
+    }
+
+    .button-row.dark-bg {
+      background: var(--burgundy-deep);
+    }
+
+    .btn {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: var(--radius-sm);
+      transition: all 200ms ease;
+      border: 1.5px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--burgundy);
+      color: var(--white);
+      border-color: var(--burgundy);
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .btn-outline-gold {
+      background: transparent;
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+      border-color: var(--border);
+    }
+
+    /* ─── Spacing Visual ─────────────────────────────────── */
+    .spacing-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .space-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+    }
+
+    .space-block {
+      background: var(--burgundy);
+      height: 20px;
+      border-radius: 2px;
+      opacity: 0.7;
+    }
+
+    .space-label {
+      font-family: 'Courier New', monospace;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      min-width: 160px;
+    }
+
+    /* ─── Voice & Tone ───────────────────────────────────── */
+    .tone-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+    }
+
+    .tone-card {
+      padding: var(--space-5);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .tone-card.do {
+      border-left: 3px solid var(--gold);
+    }
+
+    .tone-card.dont {
+      border-left: 3px solid var(--burgundy-light);
+    }
+
+    .tone-card-label {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: var(--space-3);
+      color: var(--muted);
+    }
+
+    .tone-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tone-card ul li {
+      font-size: var(--text-sm);
+      color: var(--ink-mid);
+      padding: 5px 0;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.5;
+    }
+
+    .tone-card ul li:last-child { border-bottom: none; }
+
+    .tone-card ul li::before {
+      content: '—';
+      margin-right: 8px;
+      color: var(--muted);
+    }
+
+    /* ─── Usage Examples ─────────────────────────────────── */
+    .card-preview {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--space-4);
+    }
+
+    .hero-preview {
+      background: var(--burgundy-deep);
+      padding: var(--space-9) var(--space-7);
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-preview::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(61,20,84,0.4) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-preview .hero-logo {
+      font-family: var(--font-serif);
+      font-size: 56px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: -0.5px;
+      line-height: 1;
+      position: relative;
+    }
+
+    .hero-preview .hero-logo .amp {
+      color: var(--gold-light);
+    }
+
+    .hero-preview .hero-label {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-top: var(--space-3);
+    }
+
+    .section-preview {
+      background: var(--cream);
+      padding: var(--space-7);
+    }
+
+    .section-preview .preview-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--space-4);
+    }
+
+    .section-preview .preview-headline {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: var(--space-4);
+      max-width: 460px;
+    }
+
+    .section-preview .preview-body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      color: var(--ink-mid);
+      line-height: 1.7;
+      max-width: 420px;
+      margin-bottom: var(--space-5);
+    }
+
+    .footer-preview {
+      background: var(--plum-deep);
+      padding: var(--space-7);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: var(--space-5);
+    }
+
+    .footer-preview .footer-wordmark {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.12);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+
+    .footer-preview .footer-details {
+      text-align: right;
+    }
+
+    .footer-preview .footer-email {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      color: var(--gold-light);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: var(--space-2);
+    }
+
+    .footer-preview .footer-copy {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 1px;
+    }
+
+    /* ─── Do/Don't ───────────────────────────────────────── */
+    .do-dont-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-5);
+    }
+
+    .do-dont-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .do-dont-header {
+      padding: var(--space-3) var(--space-4);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .do-dont-header.do { background: var(--plum); color: var(--white); }
+    .do-dont-header.dont { background: var(--cream-dark); color: var(--muted); }
+
+    .do-dont-body {
+      padding: var(--space-4);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: none;
+    }
+
+    .do-dont-body ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .do-dont-body li {
+      font-size: var(--text-sm);
+      color: var(--ink-mid);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.5;
+    }
+
+    .do-dont-body li:last-child { border-bottom: none; }
+
+    /* ─── Tokens Table ───────────────────────────────────── */
+    .token-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .token-table th {
+      background: var(--cream-dark);
+      padding: 10px 16px;
+      text-align: left;
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .token-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink-mid);
+      vertical-align: middle;
+    }
+
+    .token-table tr:last-child td { border-bottom: none; }
+
+    .token-table code {
+      font-family: 'Courier New', monospace;
+      font-size: var(--text-xs);
+      color: var(--burgundy);
+      background: rgba(107,26,42,0.06);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .color-dot {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.1);
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 700px) {
+      .tone-grid, .do-dont-grid { grid-template-columns: 1fr; }
+      .type-display { font-size: 40px; }
+      .type-h1 { font-size: 32px; }
+      .hero-preview .hero-logo { font-size: 40px; }
+      .brand-header .logo-lockup { font-size: 48px; }
+      .page { padding: var(--space-6) var(--space-4); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Brand Header ───────────────────────────────────── -->
+  <header class="brand-header">
+    <p class="kit-label">Brand Kit — v1.0</p>
+    <div class="logo-lockup">PB<span class="ampersand">&amp;</span>J</div>
+    <p class="tagline">Surgical Talent Agency</p>
+  </header>
+
+  <main class="page">
+
+    <!-- ─── 1. Brand Identity ─────────────────────────────── -->
+    <section>
+      <p class="section-label">01 — Identity</p>
+      <h2 class="section-title">Who We Are</h2>
+      <p class="section-desc">PB&amp;J is a white-glove talent agency representing the world's most exceptional surgeons. The brand balances the gravitas of elite medicine with an approachable confidence — luxury without coldness, precision without sterility.</p>
+      <p class="section-desc">The name is the contrast. Peanut butter &amp; jelly: two powerful things, better together. The warmth of PB. The depth of J. That tension is the brand.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ─── 2. Color System ───────────────────────────────── -->
+    <section>
+      <p class="section-label">02 — Color System</p>
+      <h2 class="section-title">Palette</h2>
+      <p class="section-desc">Three signature colors map to the PB&amp;J identity. Burgundy is authority and depth. Plum is exclusivity and intelligence. Gold is aspiration and trust.</p>
+
+      <p style="font-size:var(--text-xs);font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-3);">Signature</p>
+      <div class="color-grid" style="margin-bottom:var(--space-5);">
+        <div class="swatch">
+          <div class="swatch-block" style="background:#6B1A2A;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Burgundy</div>
+            <div class="swatch-hex">#6B1A2A</div>
+            <div class="swatch-role">Primary — authority</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:#3D1454;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Plum</div>
+            <div class="swatch-hex">#3D1454</div>
+            <div class="swatch-role">Secondary — exclusivity</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:#C4971F;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Gold</div>
+            <div class="swatch-hex">#C4971F</div>
+            <div class="swatch-role">Accent — premium</div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:var(--text-xs);font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-3);">Supporting</p>
+      <div class="color-grid" style="margin-bottom:var(--space-5);">
+        <div class="swatch">
+          <div class="swatch-block" style="background:#4D1020;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Burgundy Deep</div>
+            <div class="swatch-hex">#4D1020</div>
+            <div class="swatch-role">Hero, footer BG</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:#8C3045;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Burgundy Light</div>
+            <div class="swatch-hex">#8C3045</div>
+            <div class="swatch-role">Hover states</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:#280D38;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Plum Deep</div>
+            <div class="swatch-hex">#280D38</div>
+            <div class="swatch-role">Footer alternate</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:#DEB84A;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Gold Light</div>
+            <div class="swatch-hex">#DEB84A</div>
+            <div class="swatch-role">On dark backgrounds</div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:var(--text-xs);font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-3);">Neutral</p>
+      <div class="color-grid">
+        <div class="swatch">
+          <div class="swatch-block" style="background:#FAF8F4;border:1px solid #E5DDE0;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Cream</div>
+            <div class="swatch-hex">#FAF8F4</div>
+            <div class="swatch-role">Page background</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:#F0EAE3;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Cream Dark</div>
+            <div class="swatch-hex">#F0EAE3</div>
+            <div class="swatch-role">Alt sections</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:#1A0B12;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Ink</div>
+            <div class="swatch-hex">#1A0B12</div>
+            <div class="swatch-role">Primary text</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:#7A6470;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Muted</div>
+            <div class="swatch-hex">#7A6470</div>
+            <div class="swatch-role">Labels, captions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ─── 3. Typography ─────────────────────────────────── -->
+    <section>
+      <p class="section-label">03 — Typography</p>
+      <h2 class="section-title">Type System</h2>
+      <p class="section-desc">Cormorant Garamond brings the editorial luxury — sweeping serifs, high contrast, editorial authority. Montserrat provides the precision — geometric, clean, readable. The pairing mirrors the brand: warmth and rigor.</p>
+
+      <div class="type-sample">
+        <p class="type-meta">Display — Cormorant Garamond 600, 72px</p>
+        <div class="type-display">Exceptional.</div>
+      </div>
+
+      <div class="type-sample">
+        <p class="type-meta">H1 — Cormorant Garamond 600, 48px</p>
+        <div class="type-h1">The World's Most<br/>Exceptional Surgeons.</div>
+      </div>
+
+      <div class="type-sample">
+        <p class="type-meta">H2 — Cormorant Garamond 500, 36px</p>
+        <div class="type-h2">Mastery Meets Opportunity.</div>
+      </div>
+
+      <div class="type-sample">
+        <p class="type-meta">H3 — Cormorant Garamond 500, 24px</p>
+        <div class="type-h3">Intentionally small. Unshakably precise.</div>
+      </div>
+
+      <div class="type-sample">
+        <p class="type-meta">Manifesto — Cormorant Garamond 300 Italic, 40px</p>
+        <div class="type-manifesto">"We represent the surgeons<br/>the world depends on."</div>
+      </div>
+
+      <div class="type-sample">
+        <p class="type-meta">Body Large — Montserrat 400, 18px</p>
+        <div class="type-body-lg">PB&amp;J is a selective agency. We work with a small number of elite surgeons — connecting mastery with the partnerships, institutions, and opportunities that deserve it.</div>
+      </div>
+
+      <div class="type-sample">
+        <p class="type-meta">Body — Montserrat 400, 16px</p>
+        <div class="type-body">For surgeon representation or partnership inquiries, reach us directly. We don't have a form. That's intentional.</div>
+      </div>
+
+      <div class="type-sample">
+        <p class="type-meta">Label — Montserrat 600, 11px, 3px tracking, uppercase</p>
+        <div class="type-label">Who We Are &nbsp;&nbsp;·&nbsp;&nbsp; Connect &nbsp;&nbsp;·&nbsp;&nbsp; New York, NY</div>
+      </div>
+
+      <p style="font-size:var(--text-xs);font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:var(--space-5) 0 var(--space-3);">Google Fonts Import</p>
+      <div style="background:var(--ink);color:#DEB84A;font-family:'Courier New',monospace;font-size:12px;padding:var(--space-4) var(--space-5);border-radius:var(--radius-md);line-height:1.8;word-break:break-all;">
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ─── 4. Spacing ────────────────────────────────────── -->
+    <section>
+      <p class="section-label">04 — Spacing</p>
+      <h2 class="section-title">Spacing Scale</h2>
+      <p class="section-desc">8dp grid system. All padding, margins, and gaps snap to this scale. Generous whitespace is non-negotiable — it signals confidence.</p>
+
+      <div class="spacing-grid">
+        <div class="space-row">
+          <div class="space-label">--space-1 &nbsp; 4px</div>
+          <div class="space-block" style="width:4px;"></div>
+        </div>
+        <div class="space-row">
+          <div class="space-label">--space-2 &nbsp; 8px</div>
+          <div class="space-block" style="width:8px;"></div>
+        </div>
+        <div class="space-row">
+          <div class="space-label">--space-3 &nbsp; 12px</div>
+          <div class="space-block" style="width:12px;"></div>
+        </div>
+        <div class="space-row">
+          <div class="space-label">--space-4 &nbsp; 16px</div>
+          <div class="space-block" style="width:16px;"></div>
+        </div>
+        <div class="space-row">
+          <div class="space-label">--space-5 &nbsp; 24px</div>
+          <div class="space-block" style="width:24px;"></div>
+        </div>
+        <div class="space-row">
+          <div class="space-label">--space-6 &nbsp; 32px</div>
+          <div class="space-block" style="width:32px;"></div>
+        </div>
+        <div class="space-row">
+          <div class="space-label">--space-7 &nbsp; 48px</div>
+          <div class="space-block" style="width:48px;"></div>
+        </div>
+        <div class="space-row">
+          <div class="space-label">--space-8 &nbsp; 64px</div>
+          <div class="space-block" style="width:64px;"></div>
+        </div>
+        <div class="space-row">
+          <div class="space-label">--space-9 &nbsp; 96px</div>
+          <div class="space-block" style="width:96px;"></div>
+        </div>
+        <div class="space-row">
+          <div class="space-label">--space-10 &nbsp; 128px</div>
+          <div class="space-block" style="width:128px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ─── 5. Buttons / Components ───────────────────────── -->
+    <section>
+      <p class="section-label">05 — Components</p>
+      <h2 class="section-title">Buttons</h2>
+      <p class="section-desc">Outlined buttons only — no filled gradients. Simple, confident, restrained. The text is the pitch, not the button.</p>
+
+      <div class="button-row">
+        <a class="btn btn-outline-dark" href="#">Learn More</a>
+        <a class="btn btn-outline-gold" href="#">Connect</a>
+        <a class="btn btn-primary" href="#">For Surgeons</a>
+        <a class="btn btn-ghost" href="#">For Partners</a>
+      </div>
+
+      <div class="button-row dark-bg">
+        <a class="btn btn-outline-white" href="#">Learn More</a>
+        <a class="btn btn-outline-gold" href="#">Connect</a>
+      </div>
+
+      <p style="font-size:var(--text-xs);color:var(--muted);margin-top:var(--space-3);">All buttons: Montserrat 600, 11px, letter-spacing 2.5px, uppercase. Border 1.5px. Padding 14px 32px. Transition 200ms ease.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ─── 6. Page Previews ───────────────────────────────── -->
+    <section>
+      <p class="section-label">06 — Page Previews</p>
+      <h2 class="section-title">Section Patterns</h2>
+      <p class="section-desc">How the system comes together at page level.</p>
+
+      <!-- Hero Preview -->
+      <p style="font-size:var(--text-xs);font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-3);">Hero — Dark Background</p>
+      <div class="card-preview" style="margin-bottom:var(--space-5);">
+        <div class="hero-preview">
+          <div class="hero-logo">PB<span class="amp">&amp;</span>J</div>
+          <p class="hero-label">Surgical Talent Agency</p>
+        </div>
+      </div>
+
+      <!-- Content Section Preview -->
+      <p style="font-size:var(--text-xs);font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-3);">Content Section — Cream Background</p>
+      <div class="card-preview" style="margin-bottom:var(--space-5);">
+        <div class="section-preview">
+          <p class="preview-eyebrow">Who We Are</p>
+          <p class="preview-headline">Where expertise<br/>meets opportunity.</p>
+          <p class="preview-body">We represent a select group of the world's most exceptional surgeons — connecting mastery with the institutions, platforms, and partnerships that deserve it.</p>
+          <a class="btn btn-outline-dark" href="#">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Footer Preview -->
+      <p style="font-size:var(--text-xs);font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-3);">Footer — Plum Deep Background</p>
+      <div class="card-preview">
+        <div class="footer-preview">
+          <div class="footer-wordmark">PB&amp;J</div>
+          <div class="footer-details">
+            <a class="footer-email" href="mailto:hello@pbandjagency.com">hello@pbandjagency.com</a>
+            <p class="footer-copy">© 2025 PB&amp;J Agency. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ─── 7. CSS Variables Reference ───────────────────── -->
+    <section>
+      <p class="section-label">07 — Tokens</p>
+      <h2 class="section-title">CSS Variables Reference</h2>
+      <p class="section-desc">Copy-paste these into the <code style="font-family:'Courier New';font-size:14px;color:var(--burgundy);">:root</code> of <code style="font-family:'Courier New';font-size:14px;color:var(--burgundy);">index.html</code>.</p>
+
+      <table class="token-table">
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th>Value</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>--burgundy</code></td><td><span class="color-dot" style="background:#6B1A2A;"></span>#6B1A2A</td><td>Primary CTAs, borders on light</td></tr>
+          <tr><td><code>--burgundy-deep</code></td><td><span class="color-dot" style="background:#4D1020;"></span>#4D1020</td><td>Hero bg, footer bg option</td></tr>
+          <tr><td><code>--plum</code></td><td><span class="color-dot" style="background:#3D1454;"></span>#3D1454</td><td>Secondary accents, overlays</td></tr>
+          <tr><td><code>--plum-deep</code></td><td><span class="color-dot" style="background:#280D38;"></span>#280D38</td><td>Footer background</td></tr>
+          <tr><td><code>--gold</code></td><td><span class="color-dot" style="background:#C4971F;"></span>#C4971F</td><td>CTA buttons, links on light</td></tr>
+          <tr><td><code>--gold-light</code></td><td><span class="color-dot" style="background:#DEB84A;"></span>#DEB84A</td><td>Gold on dark backgrounds</td></tr>
+          <tr><td><code>--cream</code></td><td><span class="color-dot" style="background:#FAF8F4;border:1px solid #ccc;"></span>#FAF8F4</td><td>Page background</td></tr>
+          <tr><td><code>--cream-dark</code></td><td><span class="color-dot" style="background:#F0EAE3;border:1px solid #ccc;"></span>#F0EAE3</td><td>Alternate section bg</td></tr>
+          <tr><td><code>--ink</code></td><td><span class="color-dot" style="background:#1A0B12;"></span>#1A0B12</td><td>All body text</td></tr>
+          <tr><td><code>--muted</code></td><td><span class="color-dot" style="background:#7A6470;"></span>#7A6470</td><td>Labels, captions, eyebrows</td></tr>
+          <tr><td><code>--border</code></td><td><span class="color-dot" style="background:#E5DDE0;border:1px solid #ccc;"></span>#E5DDE0</td><td>Dividers, input borders</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ─── 8. Voice & Tone ───────────────────────────────── -->
+    <section>
+      <p class="section-label">08 — Voice &amp; Tone</p>
+      <h2 class="section-title">How PB&amp;J Speaks</h2>
+      <p class="section-desc">The words are as important as the visuals. PB&amp;J speaks with the confidence of someone who doesn't need to convince you.</p>
+
+      <div class="tone-grid">
+        <div class="tone-card do">
+          <p class="tone-card-label">We Are</p>
+          <ul>
+            <li>Confident, not arrogant</li>
+            <li>Precise, not clinical</li>
+            <li>Warm, not casual</li>
+            <li>Selective, not cold</li>
+            <li>Brief, not terse</li>
+            <li>Authoritative, not intimidating</li>
+          </ul>
+        </div>
+        <div class="tone-card dont">
+          <p class="tone-card-label">We Are Not</p>
+          <ul>
+            <li>Salesy or pushy</li>
+            <li>Corporate jargon-heavy</li>
+            <li>Overly formal or stiff</li>
+            <li>Vague or abstract</li>
+            <li>Flashy or hyperbolic</li>
+            <li>Generic medical brand voice</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:var(--space-5);background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-5);">
+        <p class="type-meta" style="margin-bottom:var(--space-4);">Copy Examples</p>
+        <p style="font-family:var(--font-serif);font-size:22px;font-weight:400;font-style:italic;color:var(--ink);margin-bottom:var(--space-3);">"Intentionally small. Impossibly selective."</p>
+        <p style="font-family:var(--font-serif);font-size:22px;font-weight:400;font-style:italic;color:var(--ink);margin-bottom:var(--space-3);">"Where expertise meets opportunity."</p>
+        <p style="font-family:var(--font-serif);font-size:22px;font-weight:400;font-style:italic;color:var(--ink);margin-bottom:var(--space-3);">"We don't represent surgeons. We represent legacies."</p>
+        <p style="font-family:var(--font-serif);font-size:22px;font-weight:400;font-style:italic;color:var(--ink);">"The right surgeon for the right moment."</p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ─── 9. Do/Don't ───────────────────────────────────── -->
+    <section>
+      <p class="section-label">09 — Do &amp; Don't</p>
+      <h2 class="section-title">Design Rules</h2>
+
+      <div class="do-dont-grid">
+        <div class="do-dont-card">
+          <div class="do-dont-header do">Do</div>
+          <div class="do-dont-body">
+            <ul>
+              <li>Use full-viewport sections with generous padding</li>
+              <li>Let whitespace do the heavy lifting</li>
+              <li>Use outlined buttons — never filled gradients</li>
+              <li>Lead sections with a small uppercase eyebrow label</li>
+              <li>Use Cormorant for all emotional/headline copy</li>
+              <li>Shift footer to dark (plum or burgundy)</li>
+              <li>Keep CTAs to one per section</li>
+              <li>Use gold sparingly — it should feel earned</li>
+            </ul>
+          </div>
+        </div>
+        <div class="do-dont-card">
+          <div class="do-dont-header dont">Don't</div>
+          <div class="do-dont-body">
+            <ul>
+              <li>Use stock photos of doctors with stethoscopes</li>
+              <li>Use blue-and-white clinical color combinations</li>
+              <li>Use emojis anywhere — ever</li>
+              <li>Add gradients to buttons</li>
+              <li>Add heavy animations or video backgrounds</li>
+              <li>Cram multiple CTAs into one section</li>
+              <li>Use all-caps for body text</li>
+              <li>Mix icon styles — use one family only</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Brand Kit Footer ──────────────────────────────── -->
+  <footer style="background:var(--plum-deep);padding:var(--space-7) var(--space-6);text-align:center;">
+    <p style="font-family:var(--font-serif);font-size:48px;font-weight:600;color:rgba(255,255,255,0.1);letter-spacing:-1px;margin-bottom:var(--space-3);">PB&amp;J</p>
+    <p style="font-family:var(--font-sans);font-size:var(--text-xs);font-weight:600;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.3);">Brand Kit v1.0 — Confidential</p>
+  </footer>
+
+</body>
+</html>

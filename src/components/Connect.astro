@@ -1,0 +1,66 @@
+---
+---
+
+<section id="connect" class="connect">
+  <div class="connect__inner wrap">
+    <p class="eyebrow js-fade-up">Connect</p>
+
+    <a
+      href="mailto:hello@pbandjagency.com"
+      class="connect__email js-fade-up"
+    >
+      hello@pbandjagency.com
+    </a>
+
+    <p class="connect__sub js-fade-up">
+      For surgeon representation or partnership inquiries. New York, NY.
+    </p>
+  </div>
+</section>
+
+<style lang="scss">
+  .connect {
+    position: relative;
+    z-index: 2;
+    background: var(--cream-dark);
+    padding: 160px 0;
+
+    @media (max-width: 768px) {
+      padding: 100px 0;
+    }
+  }
+
+  .connect__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .connect__email {
+    font-family: var(--font-serif);
+    font-size: clamp(22px, 3.5vw, 40px);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+    transition: border-color 200ms ease, color 200ms ease;
+
+    &:hover {
+      color: var(--burgundy);
+      border-color: var(--burgundy);
+    }
+  }
+
+  .connect__sub {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 380px;
+  }
+</style>

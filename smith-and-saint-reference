@@ -1,0 +1,194 @@
+# SMITH&SAINT — Site Teardown & Reference Guide
+## For PB&J Landing Page Build
+
+---
+
+## SITE OVERVIEW
+
+**URL:** smithandsaint.com  
+**Tagline:** "Where legacies are made."  
+**What they are:** Boutique talent agency for sports, digital, and culinary creators  
+**Built by:** Studio Kiln (studio-kiln.com)  
+**Platform:** WordPress + Gravity Forms  
+**Total page height:** ~5,076px (roughly 7 viewport-lengths)
+
+---
+
+## PAGE STRUCTURE (Top to Bottom)
+
+### 1. HERO SECTION (Full Viewport)
+- **Background:** Full-bleed cinematic video/image (two fencers, dark moody lighting)
+- **Logo:** Large S&S monogram centered on screen (white, ornate intertwined S&S in oval)
+- **Nav:** Minimal — just "MENU" hamburger (top right) + city/time indicator (top left: "13:03 BOSTON, MA, USA (GMT-4)")
+- **No headline text in hero** — logo does all the talking
+- **Vibe:** Gallery opening, not a sales page. Says "you already know why you're here."
+
+### 2. SCROLLING CATEGORY TICKER
+- Horizontal auto-scrolling marquee of talent categories
+- Shows photo thumbnails with labels: **Culinary** | **Sports** | **Digital**
+- Each links to its category page
+- Reveals the tagline: **"Where legacies are made."** as you scroll
+
+### 3. WHO WE ARE SECTION
+- **Layout:** Three-panel image collage (brand partnerships — Dick's Sporting Goods visible) with S&S logo overlaid center
+- **Heading:** "WHO WE ARE" (left-aligned, uppercase, small)
+- **Body text:** "SMITH&SAINT is the leading boutique talent agency for the next generation of sports, digital, and culinary game changers."
+- **CTA:** "READ MORE" button (outlined/bordered style)
+
+### 4. MANIFESTO / PULL-QUOTE SECTION
+- **Background:** Off-white / cream (#FAF9F6)
+- **Giant text, centered:** 
+  > "INTENTIONALLY SMALL  
+  > UNSHAKABLY STRONG."
+- **Sub-label:** "FOR TALENT" (small caps, left side)
+- **Body text below:** "We partner with sports, digital, and culinary voices to turn influence into legacy, building opportunities rooted in authenticity and purpose."
+- **This is the signature moment of the page** — the "less is more" statement
+
+### 5. FOR TALENT SECTION
+- **Layout:** Text left, large image right (offset/overlapping with S&S watermark)
+- **Image:** Gymnast on balance beam (Suni Lee-style, high production)
+- **Body text:** "We blend strategy, access, and artistry to elevate talent beyond the expected. Our selective, high-touch approach ensures every move builds toward a lasting, legacy-driven future."
+- **CTA:** "LEARN MORE" (outlined button)
+
+### 6. FOR BRANDS SECTION
+- **Sub-label:** "FOR BRANDS" (small caps, left side)
+- **Body text:** "Partners come to us for more than reach — they come for talent who embody purpose, values, and cultural relevance. Our clients deliver impact that lasts far beyond the campaign."
+- **Image:** Talent in brand partnership context (lifestyle/editorial photo, right-aligned)
+- **Additional text:** "Our clients don't just bring influence; they bring authenticity, purpose, and staying power..."
+- **CTA:** "LEARN MORE"
+
+### 7. LATEST NEWS / CAROUSEL
+- **Background shifts to:** Warm burgundy/maroon (#7A3B3B approximately)
+- **Heading:** "LATEST" (left-aligned)
+- **Layout:** Horizontal scrolling card carousel (4+ cards visible)
+- **Card format:** Photo thumbnail + headline + short description + "READ MORE"
+- **S&S watermark logo** overlaid semi-transparent behind carousel
+
+### 8. FOOTER
+- **Background:** Same burgundy/maroon
+- **Elements:**
+  - Email: hello@smithsaint.com (with "Contact" label)
+  - HQ: Boston, MA
+  - Social links: Instagram, TikTok, LinkedIn, Facebook
+  - Privacy Policy + Site Credit
+  - Newsletter signup (email field + "Subscribe" button)
+  - Giant full-width "SMITH&SAINT" wordmark at very bottom (huge serif type)
+
+---
+
+## TYPOGRAPHY
+
+### Primary Display Font (Headlines / Taglines)
+- **Font:** ABCArizonaFlare Regular
+- **Size:** ~67.5px for big statements
+- **Weight:** 300 (light)
+- **Line height:** 0.9x (tight)
+- **Letter spacing:** -1.35px (slightly compressed)
+- **Style:** Elegant serif with flared terminals — feels editorial, luxury magazine
+
+### Secondary / Body Font
+- **Font:** ABCArizonaSans Regular
+- **Size:** 12px base, 25.5px for larger body text
+- **Weight:** 300 (light)
+- **Line height:** 1.1x
+- **Letter spacing:** -0.51px
+
+### Heading Treatment
+- Section labels (WHO WE ARE, FOR TALENT, FOR BRANDS, LATEST): **uppercase, small, sans-serif, tracked out**
+- Statements/taglines: **Large serif, title case or sentence case, tight leading**
+
+---
+
+## COLOR PALETTE
+
+| Role | Color | Hex (approx) |
+|------|-------|---------------|
+| Background (main) | Off-white / warm cream | #FAF9F6 |
+| Text (primary) | Near-black | #191919 |
+| Accent / Footer bg | Warm burgundy/maroon | #7A3B3B |
+| Footer text | White/cream | #FFFFFF |
+| Logo | White (on dark) or burgundy (on light) | — |
+| Borders/CTAs | Black outlined on cream | #191919 border |
+
+---
+
+## DESIGN PATTERNS WORTH STEALING
+
+1. **No navigation bar** — just a hamburger menu. Forces you to engage with the content, not hunt for links.
+
+2. **Logo-as-hero** — No headline needed. The brand mark IS the statement. Works when you want to say "we're established, not selling."
+
+3. **Giant manifesto statement** — "Intentionally Small. Unshakably Strong." This is the #1 element to replicate. Big, bold, unapologetic positioning.
+
+4. **Two-audience split** — "For Talent" and "For Brands" sections address both sides of the marketplace without cluttering.
+
+5. **Offset image layouts** — Images sit right-of-center with S&S watermark bleeding underneath. Creates depth without complexity.
+
+6. **Color shift for credibility section** — Page goes from cream → burgundy for the news/social proof section. Signals a tonal shift.
+
+7. **Minimal CTAs** — Just "Learn More" and "Read More" in outlined buttons. No "GET STARTED" or "BOOK A CALL" energy. The scarcity is the pitch.
+
+8. **City + time in header** — Small touch that says "we're real, we're here, we're working right now." Adds human presence.
+
+---
+
+## HAMBURGER MENU CONTENTS
+
+**Main Nav:**
+- Our Work
+- Our Process
+- Who We Are
+
+**Contact Section (3 separate forms):**
+- Join Our Team (job applicant form)
+- Apply To Our Roster (talent application — very detailed intake)
+- Work With Our Talent (brand/agency inquiry form)
+
+**Footer in menu:**
+- hello@smithsaint.com
+- HQ: Boston, MA
+- Instagram, TikTok, LinkedIn, Facebook
+- Privacy Policy | Site Credit
+
+---
+
+## CONTACT FORMS (3 types, all in menu overlay)
+
+### "Join Our Team" Form
+- Name, Email, Resume upload, Message, Subject line
+
+### "Work With Our Talent" (For Brands)
+- First/Last name, Email, Brand or Agency Name
+- Which roster member(s) interested in
+- Campaign details (budget, scope, timing)
+- Urgency dropdown (Yes/No)
+
+### "Apply To Our Roster" (For Talent)
+- Name, Email, Instagram URL, TikTok URL
+- Blog URL, Facebook, Pinterest
+- Posting frequency, incoming paid opportunities/month
+- Rate cards for: IG static, IG Reel, IG Story, TikTok
+- Annual sponsored post income
+- Monthly sponsored income (last 6 months)
+- Affiliate revenue
+- US audience percentages (IG + TikTok)
+- Screenshot uploads: IG demographics, IG story views, TikTok demographics
+- Other revenue sources, recent brand partners
+- Why they want an agency, goals, dream brands
+- Content planning tools used
+- How they heard about S&S
+- Biggest struggle with brand partnerships
+
+---
+
+## KEY TAKEAWAYS FOR PB&J
+
+1. **The site is a filter, not a funnel.** It's designed to attract the right people and repel the wrong ones. No pricing, no "how it works" flow chart. Just vibe + positioning.
+
+2. **Copy is sharp and specific.** Every sentence earns its spot. No filler, no "we're passionate about helping..." — it's "intentionally small, unshakably strong."
+
+3. **The talent application form IS the sales pitch.** By asking detailed questions about rates, demographics, and income, they're communicating: "We're serious. Are you?"
+
+4. **Two-sided marketplace design.** If PB&J serves both surgeons and brands/hospitals, this "For X / For Y" split is the move.
+
+5. **Production value signals quality.** The photography is high-end. If PB&J can get even 2-3 premium photos, it changes the entire feel.

@@ -1,0 +1,58 @@
+---
+import Header from '../components/Header.astro';
+import NavOverlay from '../components/NavOverlay.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Manifesto from '../components/Manifesto.astro';
+import Partners from '../components/Partners.astro';
+import Connect from '../components/Connect.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PB&J — Surgical Talent Agency</title>
+  <meta name="description" content="PB&J is a white-glove talent agency representing the world's most exceptional surgeons — connecting mastery with the partnerships, platforms, and legacies that deserve it." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PB&J — Surgical Talent Agency" />
+  <meta property="og:description" content="Intentionally small. Impossibly selective." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pbandjagency.github.io" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style is:global lang="scss">
+    @import '../styles/global.scss';
+  </style>
+</head>
+
+<body>
+  <Header />
+  <NavOverlay />
+
+  <main>
+    <Hero />
+    <About />
+    <Manifesto />
+    <Partners />
+    <Connect />
+  </main>
+
+  <Footer />
+
+  <script>
+    import '../scripts/main.js';
+  </script>
+</body>
+</html>

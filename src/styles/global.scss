@@ -1,0 +1,147 @@
+@import 'tokens';
+@import 'animations';
+
+// ─── Reset ────────────────────────────────────────────────
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; // Lenis handles smooth scrolling
+}
+
+body {
+  background: var(--burgundy-deep);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+// ─── Text Scale ───────────────────────────────────────────
+.text-display {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  letter-spacing: -0.88px;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.text-sub {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  letter-spacing: -0.72px;
+  line-height: 1.1;
+}
+
+.text-label {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.text-caption {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+}
+
+.text-small {
+  font-family: var(--font-sans);
+  font-size: 12px;
+}
+
+// ─── Layout ───────────────────────────────────────────────
+.wrap {
+  padding: 0 24px;
+
+  @media (min-width: 768px) {
+    padding: 0 48px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 80px;
+  }
+}
+
+// ─── Eyebrow label ────────────────────────────────────────
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+// ─── Buttons ──────────────────────────────────────────────
+.btn {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 0;
+  border: 1.5px solid transparent;
+  background: transparent;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.btn-outline-dark {
+  color: var(--ink);
+  border-color: var(--ink);
+
+  &:hover {
+    background: var(--ink);
+    color: var(--cream);
+  }
+}
+
+.btn-outline-white {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.45);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
+  }
+}
+
+.btn-outline-gold {
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+
+  &:hover {
+    background: var(--gold-light);
+    color: var(--plum-deep);
+  }
+}

@@ -1,0 +1,35 @@
+// Initial states for GSAP-animated elements.
+// These hide elements before JS runs so there's no layout flash.
+
+.js-fade-up {
+  opacity: 0;
+  transform: translateY(8px);
+  will-change: opacity, transform;
+}
+
+.js-logo-in {
+  opacity: 0;
+  transform: translateX(-30px);
+  will-change: opacity, transform;
+}
+
+// Header color transition (JS adds .header--light when past hero)
+.site-header {
+  transition: color 400ms ease, background 400ms ease;
+}
+
+.site-header--light {
+  color: var(--ink);
+
+  .header-menu-btn {
+    color: var(--ink);
+
+    &::after {
+      background: var(--ink);
+    }
+  }
+
+  .header-time {
+    color: var(--ink-mid);
+  }
+}
