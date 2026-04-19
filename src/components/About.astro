@@ -20,8 +20,11 @@
       <a href="#connect" class="btn btn-outline-dark js-fade-up">Learn More</a>
     </div>
 
-    <div class="about__ghost" aria-hidden="true">
-      <img src={`${import.meta.env.BASE_URL}/assets/PBJ-nobkrd.svg`} alt="" />
+    <div class="about__image js-fade-up" aria-hidden="true">
+      <img
+        src={`${import.meta.env.BASE_URL}/assets/handshake.png`}
+        alt=""
+      />
     </div>
   </div>
 </section>
@@ -42,10 +45,18 @@
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
   }
 
   .about__content {
-    max-width: 560px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -70,17 +81,16 @@
     max-width: 480px;
   }
 
-  .about__ghost {
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 360px;
-    opacity: 0.07;
-    pointer-events: none;
+  .about__image {
+    position: relative;
+    overflow: hidden;
 
     img {
       width: 100%;
+      height: 560px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     @media (max-width: 900px) {
