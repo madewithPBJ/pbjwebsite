@@ -3,7 +3,15 @@
 
 <header class="site-header">
   <div class="site-header__inner wrap">
-    <span class="header-time" id="ny-time">NEW YORK, NY</span>
+    <span class="header-time" id="ny-time">DENVER, CO</span>
+
+    <img
+      class="header-logo-ref"
+      src={`${import.meta.env.BASE_URL}/assets/PBJ-noWHT.svg`}
+      alt=""
+      aria-hidden="true"
+      width="61"
+    />
 
     <button class="header-menu-btn" id="menu-btn" aria-label="Open navigation">
       <span class="header-menu-btn__text">MENU</span>
@@ -25,10 +33,23 @@
   }
 
   .site-header__inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     pointer-events: auto;
+  }
+
+  .header-logo-ref {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 61px;
+    height: auto;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
   }
 
   .header-time {
@@ -71,7 +92,6 @@
     }
   }
 
-  // Applied by JS when scrolled past hero
   :global(.site-header--light) {
     color: var(--ink);
 

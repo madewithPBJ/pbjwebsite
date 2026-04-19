@@ -20,7 +20,7 @@ gsap.ticker.lagSmoothing(0);
 
 ScrollTrigger.normalizeScroll(true);
 
-// ─── NY Time ──────────────────────────────────────────────
+// ─── Denver time ──────────────────────────────────────────
 function updateTime() {
   const el = document.querySelector('#ny-time');
   if (!el) return;
@@ -35,26 +35,66 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 60_000);
 
-// ─── Hero logo entrance ───────────────────────────────────
-gsap.fromTo(
-  '.js-logo-in',
-  { opacity: 0, x: -30 },
-  { opacity: 1, x: 0, duration: 0.8, ease: 'power2.out', delay: 0.3 }
-);
+// ─── Two-logo animation ───────────────────────────────────
+const logoLanding = document.querySelector('.logo-landing');
+const headerRef   = document.querySelector('.header-logo-ref');
 
-// ─── Hero pin ─────────────────────────────────────────────
-ScrollTrigger.create({
-  trigger: '#hero',
-  start: 'top top',
-  pin: true,
-  pinSpacing: false,
+function getStartPos() {
+  const vpW = window.innerWidth;
+  const vpH = window.innerHeight;
+  const w   = Math.min(280, vpW * 0.7);
+  return { left: vpW / 2 - w / 2, top: vpH / 2 - w * 0.35, width: w };
+}
+
+function getEndPos() {
+  const r = headerRef.getBoundingClientRect();
+  return { left: r.left, top: r.top, width: r.width };
+}
+
+// Set initial position (centered in viewport) and hide
+const startPos = getStartPos();
+gsap.set(logoLanding, { ...startPos, opacity: 0 });
+
+// Entrance: fade in, no slide
+gsap.to(logoLanding, { opacity: 1, duration: 0.8, delay: 0.3, ease: 'power2.out' });
+
+// Lock scroll until animation fires
+lenis.stop();
+
+// On first scroll → fly logo to header → unlock scroll
+let fired = false;
+function playLogoAnim() {
+  if (fired) return;
+  fired = true;
+  const end = getEndPos();
+  gsap.to(logoLanding, {
+    left:     end.left,
+    top:      end.top,
+    width:    end.width,
+    duration: 0.75,
+    ease:     'power3.inOut',
+    onComplete: () => {
+      lenis.start();
+      document.body.classList.add('logo-docked');
+    },
+  });
+}
+
+window.addEventListener('wheel',     playLogoAnim, { once: true, passive: true });
+window.addEventListener('touchmove', playLogoAnim, { once: true, passive: true });
+
+// Recalculate start position on resize (if animation hasn't fired yet)
+window.addEventListener('resize', () => {
+  if (!fired) {
+    gsap.set(logoLanding, getStartPos());
+  }
 });
 
-// ─── Header color on scroll ───────────────────────────────
+// ─── Header color when content sections enter ─────────────
 ScrollTrigger.create({
   trigger: '#about',
   start: 'top 72px',
-  onEnter: () => document.querySelector('.site-header')?.classList.add('site-header--light'),
+  onEnter:     () => document.querySelector('.site-header')?.classList.add('site-header--light'),
   onLeaveBack: () => document.querySelector('.site-header')?.classList.remove('site-header--light'),
 });
 
@@ -65,7 +105,6 @@ gsap.utils.toArray('.js-fade-up').forEach((el) => {
     y: 0,
     duration: 0.6,
     ease: 'power2.out',
-    stagger: 0.1,
     scrollTrigger: {
       trigger: el,
       start: 'top 88%',
@@ -75,11 +114,10 @@ gsap.utils.toArray('.js-fade-up').forEach((el) => {
 });
 
 // ─── Nav overlay ──────────────────────────────────────────
-const nav = document.querySelector('#nav-overlay');
+const nav     = document.querySelector('#nav-overlay');
 const menuBtn = document.querySelector('#menu-btn');
 const closeBtn = document.querySelector('#nav-close');
 
-// Set initial off-screen position
 gsap.set(nav, { x: '100%' });
 
 function openNav() {
@@ -91,8 +129,7 @@ function openNav() {
 function closeNav() {
   gsap.to(nav, { x: '100%', duration: 0.6, ease: 'power3.inOut' });
   document.body.style.overflow = '';
-  lenis.start();
-  // Also close any open form panels
+  if (fired) lenis.start();
   document.querySelectorAll('.form-panel').forEach((panel) => {
     gsap.set(panel, { x: '100%' });
   });
@@ -101,7 +138,6 @@ function closeNav() {
 menuBtn?.addEventListener('click', openNav);
 closeBtn?.addEventListener('click', closeNav);
 
-// Close nav when clicking a section link
 document.querySelectorAll('[data-nav-link]').forEach((link) => {
   link.addEventListener('click', (e) => {
     const href = link.getAttribute('href');
@@ -118,23 +154,18 @@ document.querySelectorAll('[data-nav-link]').forEach((link) => {
 
 // ─── Form panels ──────────────────────────────────────────
 document.querySelectorAll('[data-form-trigger]').forEach((trigger) => {
-  // Set initial state for all panels
   const panelId = trigger.dataset.formTrigger;
-  const panel = document.querySelector(`#${panelId}`);
+  const panel   = document.querySelector(`#${panelId}`);
   if (panel) gsap.set(panel, { x: '100%' });
 
   trigger.addEventListener('click', () => {
-    if (panel) {
-      gsap.to(panel, { x: 0, duration: 0.5, ease: 'power3.inOut' });
-    }
+    if (panel) gsap.to(panel, { x: 0, duration: 0.5, ease: 'power3.inOut' });
   });
 });
 
 document.querySelectorAll('.form-panel-close').forEach((btn) => {
   btn.addEventListener('click', () => {
     const panel = btn.closest('.form-panel');
-    if (panel) {
-      gsap.to(panel, { x: '100%', duration: 0.4, ease: 'power3.inOut' });
-    }
+    if (panel) gsap.to(panel, { x: '100%', duration: 0.4, ease: 'power3.inOut' });
   });
 });

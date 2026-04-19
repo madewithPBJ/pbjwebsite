@@ -99,6 +99,22 @@ button {
   color: var(--muted);
 }
 
+// ─── Two-logo system ──────────────────────────────────────
+.logo-landing {
+  position: fixed;
+  z-index: 200;
+  pointer-events: none;
+  display: block;
+  // left / top / width written by GSAP at runtime
+}
+
+// Content starts below the fixed hero viewport
+.page-main {
+  position: relative;
+  z-index: 2;
+  padding-top: 100dvh;
+}
+
 // ─── Buttons ──────────────────────────────────────────────
 .btn {
   font-family: var(--font-sans);

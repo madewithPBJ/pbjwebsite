@@ -22,7 +22,7 @@ import Footer from '../components/Footer.astro';
   <meta property="og:title" content="PB&J — Surgical Talent Agency" />
   <meta property="og:description" content="Intentionally small. Impossibly selective." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pbandjagency.github.io" />
+  <meta property="og:url" content="https://madewithpbj.github.io/pbjwebsite" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,9 +40,17 @@ import Footer from '../components/Footer.astro';
 <body>
   <Header />
   <NavOverlay />
+  <Hero />
 
-  <main>
-    <Hero />
+  <!-- Landing logo: position:fixed, animated by GSAP from center → header -->
+  <img
+    class="logo-landing"
+    src={`${import.meta.env.BASE_URL}/assets/PBJ-noWHT.svg`}
+    alt="PB&J Agency"
+    width="280"
+  />
+
+  <main class="page-main">
     <About />
     <Manifesto />
     <Partners />
