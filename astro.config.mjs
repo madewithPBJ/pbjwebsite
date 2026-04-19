@@ -4,8 +4,8 @@ import { defineConfig } from 'astro/config';
 // If deploying to https://username.github.io/repo-name, also set base: '/repo-name'
 export default defineConfig({
   output: 'static',
-  site: 'https://pbandjagency.github.io',
-  // base: '/',
+  site: 'https://madewithpbj.github.io',
+  base: '/pbjwebsite',
   vite: {
     css: {
       preprocessorOptions: {
