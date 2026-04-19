@@ -25,12 +25,12 @@ function updateTime() {
   const el = document.querySelector('#ny-time');
   if (!el) return;
   const time = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/New_York',
+    timeZone: 'America/Denver',
     hour: '2-digit',
     minute: '2-digit',
     hour12: false,
   }).format(new Date());
-  el.textContent = `NEW YORK, NY — ${time}`;
+  el.textContent = `DENVER, CO — ${time}`;
 }
 updateTime();
 setInterval(updateTime, 60_000);
