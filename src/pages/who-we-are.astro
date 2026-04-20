@@ -1,0 +1,291 @@
+---
+import Header from '../components/Header.astro';
+import NavOverlay from '../components/NavOverlay.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who We Are — PB&J Agency</title>
+  <meta name="description" content="To prove that selective wins. Our size is our advantage — it lets us go all-in on every surgeon we represent." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style is:global lang="scss">
+    @import '../styles/global.scss';
+  </style>
+</head>
+
+<body class="subpage">
+  <Header />
+  <NavOverlay />
+
+  <main>
+
+    <!-- ─── Hero ──────────────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="page-hero__inner wrap">
+        <h1 class="page-hero__headline">
+          WE THINK IN CAREERS,<br />NOT CONTRACTS.
+        </h1>
+      </div>
+    </section>
+
+    <!-- ─── Our Vision ────────────────────────────────────── -->
+    <section class="wwa-section wwa-vision">
+      <div class="wwa-section__inner wrap">
+        <p class="eyebrow js-fade-up">Our Vision</p>
+        <p class="wwa-section__body js-fade-up">
+          To prove that selective wins. Our size is our advantage — it lets us
+          go all-in on every surgeon we represent.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── Our Mission ───────────────────────────────────── -->
+    <section class="wwa-section wwa-mission">
+      <div class="wwa-section__inner wrap">
+        <p class="eyebrow js-fade-up">Our Mission</p>
+        <p class="wwa-section__body js-fade-up">
+          To position the world's most exceptional surgeons as the names that
+          define their fields. And beyond.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── How We Do It ──────────────────────────────────── -->
+    <section class="how-section">
+      <div class="how-section__inner wrap">
+        <p class="eyebrow js-fade-up">How We Do It</p>
+
+        <ol class="how-list">
+          <li class="how-item js-fade-up">
+            <span class="how-item__num">01</span>
+            <div class="how-item__content">
+              <h3 class="how-item__title">We See the Surgeon, Not Just the Specialty</h3>
+              <p class="how-item__body">You've spent decades mastering your craft. We see the full picture — your ambitions, your standards, your legacy — not just your CV.</p>
+            </div>
+          </li>
+          <li class="how-item js-fade-up">
+            <span class="how-item__num">02</span>
+            <div class="how-item__content">
+              <h3 class="how-item__title">We're In It, Not Above It</h3>
+              <p class="how-item__body">We're hands-on at every stage, not just when there's a deal on the table.</p>
+            </div>
+          </li>
+          <li class="how-item js-fade-up">
+            <span class="how-item__num">03</span>
+            <div class="how-item__content">
+              <h3 class="how-item__title">We Think in Careers, Not Contracts</h3>
+              <p class="how-item__body">Every decision we make is filtered through one question: does this build your legacy? If not, we pass.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ─── Closing CTA ───────────────────────────────────── -->
+    <section class="closing">
+      <div class="closing__inner wrap">
+        <h2 class="closing__headline js-fade-up">
+          YOUR NAME SHOULD<br />PRECEDE YOU.
+        </h2>
+
+        <div class="closing__ctas js-fade-up">
+          <button class="btn btn-outline-white" data-form-trigger-global="form-team">Join Our Team</button>
+          <button class="btn btn-outline-white" data-form-trigger-global="form-surgeon">Apply to Our Roster</button>
+          <button class="btn btn-outline-white" data-form-trigger-global="form-partners">Work With Our Talent</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+
+  <script>
+    import '../scripts/main.js';
+  </script>
+</body>
+</html>
+
+<style lang="scss">
+  body.subpage {
+    background: var(--cream);
+  }
+
+  // ─── Page Hero ──────────────────────────────────────────
+  .page-hero {
+    background: var(--burgundy-deep);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 80px;
+
+    @media (max-width: 768px) {
+      padding-bottom: 60px;
+    }
+  }
+
+  .page-hero__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .page-hero__headline {
+    font-family: var(--font-serif);
+    font-size: clamp(48px, 7.5vw, 112px);
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 0.95;
+    letter-spacing: -2px;
+
+    @media (max-width: 600px) {
+      letter-spacing: -1px;
+      br { display: none; }
+    }
+  }
+
+  // ─── Standard section ───────────────────────────────────
+  .wwa-section {
+    padding: 120px 0;
+
+    &.wwa-vision  { background: var(--cream); }
+    &.wwa-mission { background: var(--cream-dark); }
+
+    @media (max-width: 768px) { padding: 80px 0; }
+  }
+
+  .wwa-section__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .wwa-section__body {
+    font-family: var(--font-serif);
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+  }
+
+  // ─── How We Do It ───────────────────────────────────────
+  .how-section {
+    background: var(--cream);
+    padding: 120px 0;
+
+    @media (max-width: 768px) { padding: 80px 0; }
+  }
+
+  .how-section__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .how-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .how-item {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 32px;
+    align-items: start;
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border);
+
+    &:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    &__num {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: var(--muted);
+      padding-top: 4px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__title {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    &__body {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      color: var(--ink-mid);
+      line-height: 1.75;
+    }
+  }
+
+  // ─── Closing CTA ────────────────────────────────────────
+  .closing {
+    background: var(--plum-deep);
+    padding: 140px 0;
+
+    @media (max-width: 768px) { padding: 100px 0; }
+  }
+
+  .closing__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .closing__headline {
+    font-family: var(--font-serif);
+    font-size: clamp(48px, 7vw, 96px);
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 0.95;
+    letter-spacing: -2px;
+
+    @media (max-width: 600px) {
+      br { display: none; }
+    }
+  }
+
+  .closing__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+</style>

@@ -1,0 +1,406 @@
+---
+import Header from '../components/Header.astro';
+import NavOverlay from '../components/NavOverlay.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Process — PB&J Agency</title>
+  <meta name="description" content="We design precision strategies that align your clinical authority with the opportunities that deserve it." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style is:global lang="scss">
+    @import '../styles/global.scss';
+  </style>
+</head>
+
+<body class="subpage">
+  <Header />
+  <NavOverlay />
+
+  <main>
+
+    <!-- ─── Hero ──────────────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="page-hero__inner wrap">
+        <h1 class="page-hero__headline">
+          YOUR EXPERTISE<br />GOT YOU HERE.<br />WE TAKE YOU FURTHER.
+        </h1>
+      </div>
+    </section>
+
+    <!-- ─── Our Process ───────────────────────────────────── -->
+    <section class="process-intro">
+      <div class="process-intro__inner wrap">
+        <p class="eyebrow js-fade-up">Our Process</p>
+        <p class="process-intro__body js-fade-up">
+          We design precision strategies that align your clinical authority with
+          the opportunities that deserve it — positioning you not just to be
+          known, but to be sought. From conference stages and advisory boards to
+          brand partnerships and media, we deliver the reach of a major agency
+          with the focus of a partner whose only priority is you.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── For Surgeons ──────────────────────────────────── -->
+    <section class="process-surgeons">
+      <div class="process-surgeons__inner wrap">
+        <p class="eyebrow js-fade-up">For Surgeons</p>
+        <p class="process-surgeons__body js-fade-up">
+          Our mission is direct: to position elite surgeons as the names that
+          define their fields — inside and outside the operating room. Our work
+          isn't just strategic. It's personal. We see the surgeon, not just the
+          specialty.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── Services Grid ─────────────────────────────────── -->
+    <section class="services">
+      <div class="services__inner wrap">
+        <div class="services__grid">
+
+          <article class="service-item js-fade-up">
+            <h3 class="service-item__name">Surgeon Representation</h3>
+            <p class="service-item__body">Hands-on, relationship-first representation for the world's most exceptional neuro, spine, and orthopaedic surgeons — advancing every opportunity with precision and purpose.</p>
+          </article>
+
+          <article class="service-item js-fade-up">
+            <h3 class="service-item__name">Speaking &amp; Keynotes</h3>
+            <p class="service-item__body">Placing you on the stages that matter: medical conferences, industry summits, and select public platforms — turning your clinical voice into a platform with reach.</p>
+          </article>
+
+          <article class="service-item js-fade-up">
+            <h3 class="service-item__name">Advisory Placements</h3>
+            <p class="service-item__body">Connecting you to the boards, panels, and leadership roles where your expertise shapes decisions at the highest level.</p>
+          </article>
+
+          <article class="service-item js-fade-up">
+            <h3 class="service-item__name">Contract &amp; Negotiation</h3>
+            <p class="service-item__body">We handle every deal point with precision — protecting your interests and maximizing value at every turn, so you stay focused on your work.</p>
+          </article>
+
+          <article class="service-item js-fade-up">
+            <h3 class="service-item__name">Brand Partnerships</h3>
+            <p class="service-item__body">Strategic alignment with the brands, device companies, and organizations whose standards match yours — crafting partnerships that connect authentically and carry weight.</p>
+          </article>
+
+          <article class="service-item js-fade-up">
+            <h3 class="service-item__name">Network Access</h3>
+            <p class="service-item__body">Introductions to the agents, media contacts, conference organizers, and industry leaders who expand your reach — ensuring you have the right team around your legacy.</p>
+          </article>
+
+        </div>
+
+        <a href={`${import.meta.env.BASE_URL}/#connect`} class="btn btn-outline-dark js-fade-up">Apply to Our Roster</a>
+      </div>
+    </section>
+
+    <!-- ─── For Conferences & Brands ──────────────────────── -->
+    <section class="process-brands">
+      <div class="process-brands__inner wrap">
+        <p class="eyebrow js-fade-up">For Conferences &amp; Brands</p>
+        <p class="process-brands__body js-fade-up">
+          We align your conference or brand with surgeons who command respect —
+          delivering partnerships that drive credibility, conversation, and
+          results that outlast the event.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── Our Promise ───────────────────────────────────── -->
+    <section class="promise">
+      <div class="promise__inner wrap">
+        <p class="eyebrow promise__eyebrow js-fade-up">Our Promise</p>
+
+        <ol class="promise__list">
+          <li class="promise-item js-fade-up">
+            <span class="promise-item__num">01</span>
+            <p class="promise-item__body">Direct communication at every stage, from first conversation through contract execution and beyond.</p>
+          </li>
+          <li class="promise-item js-fade-up">
+            <span class="promise-item__num">02</span>
+            <p class="promise-item__body">Opportunities matched to your reputation and goals — never volume, always precision.</p>
+          </li>
+          <li class="promise-item js-fade-up">
+            <span class="promise-item__num">03</span>
+            <p class="promise-item__body">Every detail managed, every deadline met, every commitment honored.</p>
+          </li>
+          <li class="promise-item js-fade-up">
+            <span class="promise-item__num">04</span>
+            <p class="promise-item__body">Partnerships built to endure — because your name is on everything we do.</p>
+          </li>
+        </ol>
+
+        <a href={`${import.meta.env.BASE_URL}/#connect`} class="btn btn-outline-white js-fade-up">Work With Our Talent</a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+
+  <script>
+    import '../scripts/main.js';
+  </script>
+</body>
+</html>
+
+<style lang="scss">
+  body.subpage {
+    background: var(--cream);
+  }
+
+  // ─── Page Hero ──────────────────────────────────────────
+  .page-hero {
+    background: var(--burgundy-deep);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 80px;
+
+    @media (max-width: 768px) {
+      padding-bottom: 60px;
+    }
+  }
+
+  .page-hero__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .page-hero__headline {
+    font-family: var(--font-serif);
+    font-size: clamp(48px, 7.5vw, 112px);
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 0.95;
+    letter-spacing: -2px;
+
+    @media (max-width: 600px) {
+      letter-spacing: -1px;
+      br { display: none; }
+    }
+  }
+
+  // ─── Our Process intro ──────────────────────────────────
+  .process-intro {
+    background: var(--cream);
+    padding: 120px 0;
+
+    @media (max-width: 768px) { padding: 80px 0; }
+  }
+
+  .process-intro__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .process-intro__body {
+    font-family: var(--font-sans);
+    font-size: var(--text-md);
+    color: var(--ink-mid);
+    line-height: 1.75;
+  }
+
+  // ─── For Surgeons ───────────────────────────────────────
+  .process-surgeons {
+    background: var(--cream-dark);
+    padding: 120px 0;
+
+    @media (max-width: 768px) { padding: 80px 0; }
+  }
+
+  .process-surgeons__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .process-surgeons__body {
+    font-family: var(--font-sans);
+    font-size: var(--text-md);
+    color: var(--ink-mid);
+    line-height: 1.75;
+  }
+
+  // ─── Services ───────────────────────────────────────────
+  .services {
+    background: var(--cream);
+    padding: 120px 0;
+
+    @media (max-width: 768px) { padding: 80px 0; }
+  }
+
+  .services__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .services__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .service-item {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &:nth-child(odd) {
+      padding-right: 64px;
+      border-right: 1px solid var(--border);
+
+      @media (max-width: 768px) {
+        padding-right: 0;
+        border-right: none;
+      }
+    }
+
+    &:nth-child(even) {
+      padding-left: 64px;
+
+      @media (max-width: 768px) {
+        padding-left: 0;
+      }
+    }
+
+    &:nth-last-child(-n+2) {
+      border-bottom: none;
+
+      @media (max-width: 768px) {
+        border-bottom: 1px solid var(--border);
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &__name {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    &__body {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      color: var(--ink-mid);
+      line-height: 1.75;
+      max-width: 420px;
+    }
+  }
+
+  // ─── For Conferences & Brands ───────────────────────────
+  .process-brands {
+    background: var(--cream-dark);
+    padding: 120px 0;
+
+    @media (max-width: 768px) { padding: 80px 0; }
+  }
+
+  .process-brands__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .process-brands__body {
+    font-family: var(--font-sans);
+    font-size: var(--text-md);
+    color: var(--ink-mid);
+    line-height: 1.75;
+  }
+
+  // ─── Our Promise ────────────────────────────────────────
+  .promise {
+    background: var(--plum-deep);
+    padding: 120px 0;
+
+    @media (max-width: 768px) { padding: 80px 0; }
+  }
+
+  .promise__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .promise__eyebrow {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .promise__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .promise-item {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    &:first-child {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    &__num {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: var(--gold-light);
+      padding-top: 3px;
+    }
+
+    &__body {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.4;
+    }
+  }
+</style>
