@@ -118,6 +118,7 @@ gsap.set(nav, { x: '100%' });
 function openNav() {
   gsap.to(nav,      { x: 0, duration: 0.6, ease: 'power3.inOut' });
   gsap.to(backdrop, { opacity: 1, duration: 0.4, ease: 'power2.out', pointerEvents: 'auto' });
+  if (logoLanding) gsap.to(logoLanding, { opacity: 0, duration: 0.2 });
   document.body.style.overflow = 'hidden';
   lenis.stop();
 }
@@ -125,6 +126,7 @@ function openNav() {
 function closeNav() {
   gsap.to(nav,      { x: '100%', duration: 0.6, ease: 'power3.inOut' });
   gsap.to(backdrop, { opacity: 0, duration: 0.35, ease: 'power2.in', pointerEvents: 'none' });
+  if (logoLanding) gsap.to(logoLanding, { opacity: 1, duration: 0.3, delay: 0.3 });
   document.body.style.overflow = '';
   if (fired || !logoLanding) lenis.start();
   document.querySelectorAll('.form-panel').forEach((panel) => {
