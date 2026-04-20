@@ -108,20 +108,23 @@ gsap.utils.toArray('.js-fade-up').forEach((el) => {
 });
 
 // ─── Nav overlay ──────────────────────────────────────────
-const nav     = document.querySelector('#nav-overlay');
-const menuBtn = document.querySelector('#menu-btn');
+const nav      = document.querySelector('#nav-overlay');
+const backdrop = document.querySelector('#nav-backdrop');
+const menuBtn  = document.querySelector('#menu-btn');
 const closeBtn = document.querySelector('#nav-close');
 
 gsap.set(nav, { x: '100%' });
 
 function openNav() {
-  gsap.to(nav, { x: 0, duration: 0.6, ease: 'power3.inOut' });
+  gsap.to(nav,      { x: 0, duration: 0.6, ease: 'power3.inOut' });
+  gsap.to(backdrop, { opacity: 1, duration: 0.4, ease: 'power2.out', pointerEvents: 'auto' });
   document.body.style.overflow = 'hidden';
   lenis.stop();
 }
 
 function closeNav() {
-  gsap.to(nav, { x: '100%', duration: 0.6, ease: 'power3.inOut' });
+  gsap.to(nav,      { x: '100%', duration: 0.6, ease: 'power3.inOut' });
+  gsap.to(backdrop, { opacity: 0, duration: 0.35, ease: 'power2.in', pointerEvents: 'none' });
   document.body.style.overflow = '';
   if (fired || !logoLanding) lenis.start();
   document.querySelectorAll('.form-panel').forEach((panel) => {
@@ -131,6 +134,7 @@ function closeNav() {
 
 menuBtn?.addEventListener('click', openNav);
 closeBtn?.addEventListener('click', closeNav);
+backdrop?.addEventListener('click', closeNav);
 
 document.querySelectorAll('[data-nav-link]').forEach((link) => {
   link.addEventListener('click', (e) => {

@@ -1,6 +1,7 @@
 ---
 ---
 
+<div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
 <div id="nav-overlay" class="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
 
   <!-- ─── Main nav panel ─────────────────────────────────── -->
@@ -188,15 +189,33 @@
 </div>
 
 <style lang="scss">
-  .nav-overlay {
+  .nav-backdrop {
     position: fixed;
     inset: 0;
+    z-index: 149;
+    background: rgba(10, 4, 8, 0.55);
+    pointer-events: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(56vw, 820px);
+    min-width: 400px;
     z-index: 150;
     background: var(--burgundy-deep);
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    // Initial state set by GSAP in main.js
+
+    @media (max-width: 768px) {
+      width: 100%;
+      min-width: unset;
+    }
   }
 
   // ─── Main nav inner ───────────────────────────────────
