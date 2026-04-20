@@ -42,9 +42,10 @@ const year = new Date().getFullYear();
         </a>
       </div>
 
-      <p class="footer-copy">
-        &copy; {year} PB&amp;J Agency. All rights reserved.
-      </p>
+      <div class="footer-right">
+        <a href="/pbjwebsite/privacy/" class="footer-privacy">Privacy Policy</a>
+        <p class="footer-copy">&copy; {year} PB&amp;J Agency. All rights reserved.</p>
+      </div>
     </div>
 
   </div>
@@ -118,6 +119,26 @@ const year = new Date().getFullYear();
       transition: color 200ms ease;
       &:hover { color: var(--white); }
     }
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+
+    @media (max-width: 768px) { align-items: flex-start; }
+  }
+
+  .footer-privacy {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: color 200ms ease;
+
+    &:hover { color: rgba(255, 255, 255, 0.6); }
   }
 
   .footer-copy {
