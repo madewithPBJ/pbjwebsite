@@ -3,9 +3,8 @@
 
 <section id="manifesto" class="manifesto">
   <div class="manifesto__inner wrap">
-    <blockquote class="manifesto__quote js-fade-up">
-      KNOWN IN YOUR FIELD.<br />SOUGHT BEYOND IT.
-    </blockquote>
+    <p class="manifesto__line js-fade-up">KNOWN IN YOUR FIELD.</p>
+    <p class="manifesto__line js-fade-up">SOUGHT BEYOND IT.</p>
   </div>
 </section>
 
@@ -14,34 +13,34 @@
     position: relative;
     z-index: 2;
     background: var(--cream-dark);
-    padding: 160px 0;
-    text-align: center;
+    padding: 72px 0;
 
     @media (max-width: 768px) {
-      padding: 100px 0;
+      padding: 48px 0;
     }
   }
 
   .manifesto__inner {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 0;
   }
 
-  .manifesto__quote {
+  .manifesto__line {
     font-family: var(--font-serif);
-    font-size: clamp(48px, 7vw, 96px);
+    font-size: clamp(36px, 6vw, 88px);
     font-weight: 600;
-    font-style: normal;
     text-transform: uppercase;
     color: var(--ink);
     line-height: 1.0;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
+    white-space: nowrap;
 
     @media (max-width: 600px) {
-      br { display: none; }
+      white-space: normal;
+      font-size: clamp(36px, 9vw, 56px);
     }
   }
 </style>

@@ -18,7 +18,6 @@ gsap.ticker.add((time) => {
 
 gsap.ticker.lagSmoothing(0);
 
-ScrollTrigger.normalizeScroll(true);
 
 // ─── Denver time ──────────────────────────────────────────
 function updateTime() {
@@ -57,8 +56,6 @@ if (logoLanding && headerRef) {
   gsap.set(logoLanding, { ...getStartPos(), opacity: 0 });
   gsap.to(logoLanding, { opacity: 1, duration: 0.8, delay: 0.3, ease: 'power2.out' });
 
-  lenis.stop();
-
   function playLogoAnim() {
     if (fired) return;
     fired = true;
@@ -70,7 +67,6 @@ if (logoLanding && headerRef) {
       duration: 0.75,
       ease:     'power3.inOut',
       onComplete: () => {
-        lenis.start();
         document.body.classList.add('logo-docked');
       },
     });
@@ -82,6 +78,22 @@ if (logoLanding && headerRef) {
   window.addEventListener('resize', () => {
     if (!fired) gsap.set(logoLanding, getStartPos());
   });
+}
+
+// ─── Hero card: scale + move down driven by Lenis scroll ──
+const heroCard = document.querySelector('.hero__card');
+if (heroCard) {
+  const applyHeroProgress = (scroll) => {
+    const progress = Math.min(1, scroll / 700);
+    gsap.set(heroCard, {
+      scale:        1 - 0.4 * progress,
+      y:            progress * window.innerHeight * 0.12,
+      borderRadius: progress * 10,
+    });
+  };
+
+  applyHeroProgress(window.scrollY); // handle page-refresh mid-scroll
+  lenis.on('scroll', ({ scroll }) => applyHeroProgress(scroll));
 }
 
 // ─── Header color when content sections enter ─────────────
@@ -128,7 +140,7 @@ function closeNav() {
   gsap.to(backdrop, { opacity: 0, duration: 0.35, ease: 'power2.in', pointerEvents: 'none' });
   if (logoLanding) gsap.to(logoLanding, { opacity: 1, duration: 0.3, delay: 0.3 });
   document.body.style.overflow = '';
-  if (fired || !logoLanding) lenis.start();
+  lenis.start();
   document.querySelectorAll('.form-panel').forEach((panel) => {
     gsap.set(panel, { x: '100%' });
   });

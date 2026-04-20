@@ -4,7 +4,7 @@ import { Video } from "@remotion/media";
 import { TransitionSeries, linearTiming } from "@remotion/transitions";
 import { fade } from "@remotion/transitions/fade";
 
-export const CLIP_COUNT = 8;
+export const CLIP_COUNT = 9;
 export const CLIP_SEC = 2;
 export const TRANSITION_FRAMES = 15;
 
