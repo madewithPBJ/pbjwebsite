@@ -1,0 +1,22 @@
+{
+  "name": "pbj-hero-reel",
+  "version": "1.0.0",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render src/Root.tsx HeroReel ../public/assets/hero-reel.mp4 --codec=h264 --crf=23",
+    "render:process": "remotion render src/Root.tsx ProcessReel ../public/assets/process-reel.mp4 --codec=h264 --crf=23",
+    "render:whoweare": "remotion render src/Root.tsx WhoWeAreReel ../public/assets/whoweare-reel.mp4 --codec=h264 --crf=23"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/media": "^4.0.0",
+    "@remotion/transitions": "^4.0.0",
+    "remotion": "^4.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "typescript": "^5.4.5"
+  }
+}
