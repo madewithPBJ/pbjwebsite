@@ -11,10 +11,10 @@ export const WWA_TRANSITION_FRAMES = 15;
 type ClipDef = { src: string; trimBefore?: number };
 
 const CLIPS: ClipDef[] = [
-  { src: "clips-whoweare/clip-01.mp4", trimBefore: 1.5 },
+  { src: "clips-whoweare/clip-01.mp4", trimBefore: 1.0 },
   { src: "clips-whoweare/clip-02.mp4" },
   { src: "clips-whoweare/clip-03.mp4" },
-  { src: "clips-whoweare/clip-04.mp4", trimBefore: 1.5 },
+  { src: "clips-whoweare/clip-04.mp4", trimBefore: 1.0 },
 ];
 
 const ClipScene: React.FC<ClipDef> = ({ src, trimBefore = 0 }) => {
