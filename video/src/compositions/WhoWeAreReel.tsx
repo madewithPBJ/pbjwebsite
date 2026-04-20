@@ -14,7 +14,7 @@ const CLIPS: ClipDef[] = [
   { src: "clips-whoweare/clip-01.mp4", trimBefore: 2.5 },
   { src: "clips-whoweare/clip-02.mp4" },
   { src: "clips-whoweare/clip-03.mp4" },
-  { src: "clips-whoweare/clip-04.mp4" },
+  { src: "clips-whoweare/clip-04.mp4", trimBefore: 2.5 },
 ];
 
 const ClipScene: React.FC<ClipDef> = ({ src, trimBefore = 0 }) => {
