@@ -7,7 +7,7 @@
 
     <div class="latest__grid">
 
-      <article class="latest-card js-fade-up">
+      <article class="latest-card latest-card--featured js-fade-up">
         <div class="latest-card__img">
           <img
             src={`${import.meta.env.BASE_URL}/assets/schoeff-headshot.png`}
@@ -24,12 +24,12 @@
         <div class="latest-card__img">
           <img
             src={`${import.meta.env.BASE_URL}/assets/latest-partnership.jpg`}
-            alt="New advisory partnership announcement"
+            alt="Dr. Schoeff partners with Transparent Labs"
           />
         </div>
         <div class="latest-card__body">
           <p class="latest-card__label">Partnership</p>
-          <h3 class="latest-card__headline">Dr. [Name] &times; [Brand]: Advisory Role Announced</h3>
+          <h3 class="latest-card__headline">Dr. Schoeff &times; Transparent Labs</h3>
         </div>
       </article>
 
@@ -37,12 +37,12 @@
         <div class="latest-card__img">
           <img
             src={`${import.meta.env.BASE_URL}/assets/latest-speaking.jpg`}
-            alt="Surgeon keynote speaking engagement"
+            alt="Dr. Schoeff partners with Signos"
           />
         </div>
         <div class="latest-card__body">
-          <p class="latest-card__label">Speaking</p>
-          <h3 class="latest-card__headline">Dr. [Name] Headlines [Conference] Keynote</h3>
+          <p class="latest-card__label">Partnership</p>
+          <h3 class="latest-card__headline">Dr. Schoeff &times; Signos</h3>
         </div>
       </article>
 
@@ -50,12 +50,12 @@
         <div class="latest-card__img">
           <img
             src={`${import.meta.env.BASE_URL}/assets/latest-press.jpg`}
-            alt="PBJ Agency press feature"
+            alt="Dr. Schoeff partners with OPS and Million Marker for Netflix microplastics launch"
           />
         </div>
         <div class="latest-card__body">
-          <p class="latest-card__label">In the Press</p>
-          <h3 class="latest-card__headline">PBJ Featured in [Publication]</h3>
+          <p class="latest-card__label">Partnership</p>
+          <h3 class="latest-card__headline">Dr. Schoeff &times; OPS &amp; Million Marker — Supporting the Netflix Microplastics Launch</h3>
         </div>
       </article>
 
@@ -142,6 +142,36 @@
       color: rgba(255, 255, 255, 0.85);
       line-height: 1.25;
       letter-spacing: -0.2px;
+    }
+  }
+
+  .latest-card--featured {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+
+    .latest-card__img {
+      width: 340px;
+      flex-shrink: 0;
+      aspect-ratio: 3 / 4;
+    }
+
+    .latest-card__body {
+      padding-top: 8px;
+      justify-content: flex-end;
+    }
+
+    .latest-card__headline {
+      font-size: clamp(28px, 3.5vw, 44px);
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      .latest-card__img {
+        width: 100%;
+      }
     }
   }
 </style>
